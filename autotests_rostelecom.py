@@ -240,7 +240,7 @@ def test_agreement(selenium):
                                        
                                        
 # TC-LK.RT-17 pass 
-# авторизации пользователя по ссылке через вконтакте
+# переход по ссылке для авторизации пользователя через вконтакте
 def test_auth_vk(selenium):
     form = AuthForm(selenium)
     form.vk_btn.click()
