@@ -1,7 +1,8 @@
 # Module28_Final_Project_"Тестировщик-автоматизатор_на_Python"
-Объект тестирования личный кабинет Ростелеком https://b2c.passport.rt.ru согласно ребованиям
 
-Ссылка на требования по проекту https://docs.google.com/document/d/18Du83Q6kVnKyZgauc8nZBWZHleabx7Oi/edit?usp=share_link&ouid=101500873532933086422&rtpof=true&sd=true
+Объект тестирования: https://b2c.passport.rt.ru согласно требованиям
+
+Ссылка на требования по проекту: https://docs.google.com/document/d/18Du83Q6kVnKyZgauc8nZBWZHleabx7Oi/edit?usp=share_link&ouid=101500873532933086422&rtpof=true&sd=true
 
 Заказчик передал вам следующее задание:
 
