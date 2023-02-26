@@ -16,20 +16,14 @@
 
 Ссылка на тестирование требований, тест-кейсы, баг-репорты: https://docs.google.com/spreadsheets/d/1NVPISuKBSLSK3qTZnjArqbPKtzgSoZ4rgAAlVDP9YNA/edit?usp=share_link 
 
-base_data.py - базовые классы, процедуры, функции и локаторы для автотестов
-
-settings.py - регистрационные данные для позитивных тестов авторизации
-
-test_authorization_RT - набор автотестов, нумерация соответствует номеру тест-кейса
-
-запуск автотестов (драйвер в одной папке с тест-скриптом)
-
 Запуск тестов:
 
 Установить все внешние зависимости командой pip install -r requirements.txt
 
-Скачать версию Selenium WebDriver для Chrome 110 версии
+Скачать версию Selenium WebDriver для Chrome 110 версии по ссылке: https://chromedriver.chromium.org/downloads
 
-Запустить тесты можно прописав команду:
+Команда для запуска тестов
 
-python -m pytest -v --driver Chrome --driver-path <Путь до вебдрайвера>\chromedriver.exe test_authorization_RT.py
+python3 -m pytest -v --driver Chrome --driver-path ${PATH_TO_DRIVER} autotests_rostelecom.py
+
+Где ${PATH_TO_DRIVER} находится путь к драйверу Selenium для текущей ОС
