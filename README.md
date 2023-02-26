@@ -1,8 +1,11 @@
 # Module28_Final_Project_"Тестировщик-автоматизатор_на_Python"
 
-Объект тестирования: https://b2c.passport.rt.ru
+Объект тестирования: 
+https://b2c.passport.rt.ru
 
-Ссылка на требования по проекту: https://docs.google.com/document/d/1xQ-zgYk4XS9Acw8nbp-oFM0gAXi2_Lsr/edit?usp=share_link&ouid=101500873532933086422&rtpof=true&sd=true
+Ссылка на требования по проекту: 
+https://docs.google.com/document/d/1xQ-zgYk4XS9Acw8nbp-oFM0gAXi2_Lsr/edit?usp=share_link&ouid=101500873532933086422&rtpof=true&sd=true
+
 
 Заказчик передал вам следующее задание:
 
@@ -14,7 +17,8 @@
 
 Оформить описание обнаруженных дефектов. Во время обучения вы работали с разными сервисами и шаблонами, используйте их для оформления тест-кейсов и обнаруженных дефектов. (если дефекты не будут обнаружены, то составить описание трех дефектов)
 
-Ссылка на тестирование требований, тест-кейсы, баг-репорты: https://docs.google.com/spreadsheets/d/1P_ZUNYFsSB7-bjEXu7adw0lcMu_JLiaG/edit?usp=share_link&ouid=101500873532933086422&rtpof=true&sd=true
+Ссылка на тестирование требований, тест-кейсы, баг-репорты: 
+https://docs.google.com/spreadsheets/d/1P_ZUNYFsSB7-bjEXu7adw0lcMu_JLiaG/edit?usp=share_link&ouid=101500873532933086422&rtpof=true&sd=true
 
 Запуск тестов:
 
