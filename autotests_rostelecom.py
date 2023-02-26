@@ -51,88 +51,88 @@ def test_registration_page_and_continue_button(web_browser):
     assert reg_page.continue_button.get_text() == "Продолжить"
 
 
-# TC-LK.RT-5.
-# Регистрация пользователя с пустым полем «Имя», появления текста с подсказкой об ошибке.
+# TC-LK.RT-5 pass
+# Регистрация пользователя с пустым полем «Имя», появления текста об ошибке
 def test_registration_page_with_empty_name_field(web_browser):
     auth_page = AuthPage(web_browser)
     auth_page.registration_link.click()
     reg_page = RegPage(web_browser, auth_page.get_current_url())
     reg_page.name_field.send_keys('')
-    reg_page.last_name_field.send_keys("Семенов")
-    reg_page.email_or_mobile_phone_field.send_keys("Semenov1210874@mail.ru")
-    reg_page.password_field.send_keys("qwerty")
-    reg_page.password_confirmation_field.send_keys("qwerty")
+    reg_page.last_name_field.send_keys("Кудасов")
+    reg_page.email_or_mobile_phone_field.send_keys("leapoldkudasoffrus@gmail.com")
+    reg_page.password_field.send_keys("Qwerty789")
+    reg_page.password_confirmation_field.send_keys("Qwerty789")
     reg_page.continue_button.click()
     reg_page.error_message_name.is_visible()
     assert reg_page.error_message_name.get_text() == "Необходимо заполнить поле кириллицей. От 2 до 30 символов."
 
 
-# TC-LK.RT-6
-# Регистрация пользователя с некорректным значением в поле «Имя»(менее 2-х символов), появление текста об ошибке.
+# TC-LK.RT-6 pass
+# Регистрация пользователя с полем «Имя» (менее 2-х символов), появление текста об ошибке
 def test_registration_with_an_incorrect_value_in_the_name_field(web_browser):
     auth_page = AuthPage(web_browser)
     auth_page.registration_link.click()
     reg_page = RegPage(web_browser, auth_page.get_current_url())
-    reg_page.name_field.send_keys('А')
-    reg_page.last_name_field.send_keys("Семенов")
-    reg_page.email_or_mobile_phone_field.send_keys("Semenov1210874@mail.ru")
-    reg_page.password_field.send_keys("qwerty")
-    reg_page.password_confirmation_field.send_keys("qwerty")
+    reg_page.name_field.send_keys('P')
+    reg_page.last_name_field.send_keys("Кудасов")
+    reg_page.email_or_mobile_phone_field.send_keys("leapoldkudasoffrus@gmail.com")
+    reg_page.password_field.send_keys("Qwerty789")
+    reg_page.password_confirmation_field.send_keys("Qwerty789")
     reg_page.continue_button.click()
     reg_page.error_message_name.is_visible()
     assert reg_page.error_message_name.get_text() == "Необходимо заполнить поле кириллицей. От 2 до 30 символов."
 
 
-# TC-LK.RT-7
-# Регистрация пользователя с некорректным значением в поле «Фамилия» (более 30-ти символов), появление текста с ошибкой.
+# TC-LK.RT-7 pass
+# Регистрация пользователя, поле «Фамилия» (более 30-ти символов), появление текста с ошибкой
 def test_registration_with_an_incorrect_value_in_the_last_name_field(web_browser):
     auth_page = AuthPage(web_browser)
     auth_page.registration_link.click()
     reg_page = RegPage(web_browser, auth_page.get_current_url())
-    reg_page.name_field.send_keys("Алексей")
-    reg_page.last_name_field.send_keys("Квлпвплдваполдатггущцымжюмьсдшбфувжмит")
-    reg_page.email_or_mobile_phone_field.send_keys("Semenov1210874@mail.ru")
-    reg_page.password_field.send_keys("qwerty")
-    reg_page.password_confirmation_field.send_keys("qwerty")
+    reg_page.name_field.send_keys("Леапольд")
+    reg_page.last_name_field.send_keys("Нрвапдлжвоаждваопукпощукшепокщепокшерп")
+    reg_page.email_or_mobile_phone_field.send_keys("leapoldkudasoffrus@gmail.com")
+    reg_page.password_field.send_keys("Qwerty789")
+    reg_page.password_confirmation_field.send_keys("Qwerty789")
     reg_page.continue_button.click()
     reg_page.error_message_name.is_visible()
     assert reg_page.error_message_last_name.get_text() == "Необходимо заполнить поле кириллицей. От 2 до 30 символов."
 
 
-# TC-LK.RT-8
-# Регистрация пользователя с уже зарегистрированным номером, отображается оповещающая форма.
+# TC-LK.RT-8 pass
+# Повторная регистрация с зарегистрированным номером, отображается pop-up "Учетная запись уже существует"
 def test_registration_of_an_already_registered_user(web_browser):
     auth_page = AuthPage(web_browser)
     auth_page.registration_link.click()
     reg_page = RegPage(web_browser, auth_page.get_current_url())
-    reg_page.name_field.send_keys("Алексей")
-    reg_page.last_name_field.send_keys("Семенов")
-    reg_page.email_or_mobile_phone_field.send_keys("+79879746660")
-    reg_page.password_field.send_keys("qwerty")
-    reg_page.password_confirmation_field.send_keys("qwerty")
+    reg_page.name_field.send_keys("Леапольд")
+    reg_page.last_name_field.send_keys("Кудасов")
+    reg_page.email_or_mobile_phone_field.send_keys("+79530696975")
+    reg_page.password_field.send_keys("Qwerty789")
+    reg_page.password_confirmation_field.send_keys("Qwerty789")
     reg_page.continue_button.click()
     assert reg_page.notification_form.is_visible
 
 
-# TC-LK.RT-9. Ошибка.
-# Проверка кнопки «х» - закрыть всплывающее окно оповещения.
+# TC-LK.RT-9 fail BR004
+# Проверка наличия кнопки «х» - закрыть всплывающее окно оповещения
 @pytest.mark.xfail(reason="Должна быть кнопка закрыть 'х'")
 def test_notification_form(web_browser):
     auth_page = AuthPage(web_browser)
     auth_page.registration_link.click()
     reg_page = RegPage(web_browser, auth_page.get_current_url())
-    reg_page.name_field.send_keys("Алексей")
-    reg_page.last_name_field.send_keys("Семенов")
-    reg_page.email_or_mobile_phone_field.send_keys("+79879746660")
-    reg_page.password_field.send_keys("qwerty")
-    reg_page.password_confirmation_field.send_keys("qwerty")
+    reg_page.name_field.send_keys("Леапольд")
+    reg_page.last_name_field.send_keys("Кудасов")
+    reg_page.email_or_mobile_phone_field.send_keys("+79530696975")
+    reg_page.password_field.send_keys("Qwerty789")
+    reg_page.password_confirmation_field.send_keys("Qwerty789")
     reg_page.continue_button.click()
     assert reg_page.login_button.get_text() == 'Войти'
     assert reg_page.recover_password_button.get_text() == 'Восстановить пароль'
     assert reg_page.close_button.get_text() == 'x'
 
 
-# TC-LK.RT-10
+# TC-LK.RT-10 pass
 # Некорректный пароль при регистрации пользователя(менее 8-ми символов), появления текста с подсказкой об ошибке.
 def test_incorrect_password_during_registration(web_browser):
     auth_page = AuthPage(web_browser)
