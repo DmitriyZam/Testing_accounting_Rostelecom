@@ -24,6 +24,6 @@
 
 Команда для запуска тестов
 
-python3 -m pytest -v --driver Chrome --driver-path ${PATH_TO_DRIVER} autotests_rostelecom.py
+python3 -m pytest -v --driver Chrome --driver-path autotests_rostelecom.py
 
-Где ${PATH_TO_DRIVER} находится путь к драйверу Selenium для текущей ОС
+Где driver-path путь к драйверу Selenium для текущей ОС
