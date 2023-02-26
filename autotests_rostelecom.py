@@ -4,7 +4,7 @@ from pages.auth_page import AuthPage
 from pages.registration_page import RegPage
 
 
-# Тест-кейс_1
+# Тест-кейс_1.
 # Корректное отображение "Стандартной страницы авторизации".
 def test_start_page_is_correct(web_browser):
     page = AuthPage(web_browser)
@@ -18,7 +18,7 @@ def test_start_page_is_correct(web_browser):
     assert page.logo_lk.get_text() == "Личный кабинет"
 
 
-# Тест-кейс. Ошибка.
+# Тест-кейс_2. Ошибка.
 # Проверка элементов в левом и правом блоке страницы.
 @pytest.mark.xfail(reason="Расположение элементов на странице не соответсвует ожидаемым требованиям")
 def test_location_of_page_blocks(web_browser):
