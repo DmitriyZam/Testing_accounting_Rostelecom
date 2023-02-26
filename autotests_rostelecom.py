@@ -4,8 +4,8 @@ from pages.auth_page import AuthPage
 from pages.registration_page import RegPage
 
 
-# TC-LK.RT-1.
-# Загрузка формы разрешения входа.
+# TC-LK.RT-1 pass
+# проверка отображения страницы входа в приложение
 def test_start_page_is_correct(web_browser):
     page = AuthPage(web_browser)
     phone_tab_class = page.phone_tab.get_attribute("class")
@@ -18,8 +18,8 @@ def test_start_page_is_correct(web_browser):
     assert page.logo_lk.get_text() == "Личный кабинет"
 
 
-# TC-LK.RT-2. Ошибка.
-# Проверка элементов в левом и правом блоке страницы.
+# TC-LK.RT-2. fail BR001
+# отображение меню входа согласно требований, симметричность 
 @pytest.mark.xfail(reason="Расположение элементов на странице не соответсвует ожидаемым требованиям")
 def test_location_of_page_blocks(web_browser):
     page = AuthPage(web_browser)
@@ -27,16 +27,16 @@ def test_location_of_page_blocks(web_browser):
     assert page.lk_form.find(timeout=1)
 
 
-# TC-LK.RT-3. Ошибка.
-# Проверка выбора «Номер».
+# TC-LK.RT-3. fail BR002
+# проверка работы, переключения кнопки Tab меню, смена аунтефикации
 @pytest.mark.xfail(reason="Таб выбора 'Номер' не соответсвует ожидаемым требованиям")
 def test_phone_tab(web_browser):
     page = AuthPage(web_browser)
     assert page.phone_tab.get_text() == "Номер"
 
 
-# TC-LK.RT-4. Ошибка.
-# Проверка название кнопки «Продолжить» в форме «Регестрация».
+# TC-LK.RT-4. fail BR003
+# проверка наименования кнопки «Продолжить», согласно требованиям
 @pytest.mark.xfail(reason="Кнопка должна иметь текст 'Продолжить'")
 def test_registration_page_and_continue_button(web_browser):
     auth_page = AuthPage(web_browser)
