@@ -1,4 +1,4 @@
-# Module28_Final_Project_"Тестировщик-автоматизатор_на_Python"
+# Final_project_Testing_accounting_Rostelecom_using_Selenium_according_to_requirements 
 
 Объект тестирования: 
 https://b2c.passport.rt.ru
